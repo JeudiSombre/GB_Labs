@@ -54,13 +54,13 @@ def ex_5():
     my_list = [7, 5, 3, 3, 2]
     some_input = input("Введите число: ")
     ind = 0
-    if int(some_input) in my_list:
-        my_list.insert(my_list.index(int(some_input)) + 1, int(some_input))
+    if my_list.count(int(some_input)) > 1:
+        my_list.insert(my_list.index(int(some_input)) + my_list.count(int(some_input)), int(some_input))
     else:
         for elem in my_list:
-            if elem < int(some_input) < my_list[my_list.index(elem) - 1]:
+            if elem <= int(some_input) <= my_list[my_list.index(elem) - 1]:
                 ind = my_list.index(elem)
-            elif elem > int(some_input) and my_list.index(elem) == my_list.index(my_list[-1]):
+            elif elem >= int(some_input) and my_list.index(elem) == my_list.index(my_list[-1]):
                 ind = my_list.index(my_list[-1])+1
         my_list.insert(ind, int(some_input))
 

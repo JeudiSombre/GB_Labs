@@ -63,7 +63,6 @@ def ex_5():
             elif elem >= int(some_input) and my_list.index(elem) == my_list.index(my_list[-1]):
                 ind = my_list.index(my_list[-1])+1
         my_list.insert(ind, int(some_input))
-
     print(my_list)
 
 

@@ -44,7 +44,7 @@ def ex_3():
 
 def ex_4():
     some_input = input("Введите строку из нескольких слов, разделенных пробелами: ")
-    for i,elem in enumerate(some_input.split(),1):
+    for i, elem in enumerate(some_input.split(),1):
         print(f"{i}) {elem}")
 
 
